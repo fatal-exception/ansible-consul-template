@@ -84,7 +84,7 @@
   when: systemd|changed
 
 - name: Start consul-template
-  service: name=consul-template enabled=yes state=started
+  service: name=consul-template enabled=yes state=restarted
 
 - name: consul-template template create
   include: template-config.yml
